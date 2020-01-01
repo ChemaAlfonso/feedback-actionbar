@@ -1,0 +1,112 @@
+:root{
+    --blue: rgb(43, 114, 245);
+    --blue-alpha: rgba(43, 114, 245, 0.226);
+    --light: rgba(255, 255, 255, 0.767);
+}
+
+/* Wrappers */
+.wrapper{
+    width: 100%;
+    margin: auto;
+}
+@media SCREEN AND (min-width:992px){
+    .wrapper{
+        width: 50%;
+        margin: auto;
+    } 
+}
+
+.bar-wrapper{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45vh;
+}
+
+/* Buttons */
+.btn{
+    background: rgba(214, 224, 241, 0.089);
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    margin: 0 .3em;
+    z-index: 0;
+    font-weight: 200;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all .3s;
+}
+
+.btn:hover{
+    background: var(--blue);
+    color: var(--light);
+}
+
+/* Actionbar */
+.expandable{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    top: -2.3em;
+    left: 0;
+    z-index: 1;
+    display: visible;
+    opacity: 0;
+    transition: all .5s;
+    height: 0;
+    font-size: 0;
+}
+
+.expand{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    font-size: 1.5rem;
+}
+
+.actionbar{
+    display: flex;
+    background: var(--light);
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #cfcfcf;
+    padding: 0 .3em;
+    list-style: none;
+    transition: all cubic-bezier(0.6, 0.735, 0.045) .2s;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+}
+
+.actionbar .action{
+    padding: .6em .6em;
+    height: 100%;
+    cursor: pointer;
+}
+
+.actionbar .action:hover{
+    background: var(--blue-alpha);
+}
+
+/* Inputs */
+.input-wrapper{
+    background: var(--blue-alpha);
+    text-align: center;
+    padding: .5em;
+}
+
+.copy a{
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    color: var(--blue);
+    text-decoration: none;
+    font-style: italic;
+}
+
